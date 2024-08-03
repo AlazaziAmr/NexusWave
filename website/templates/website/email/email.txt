@@ -1,0 +1,11 @@
+{% load i18n %}
+Hello  {{ username }}
+You have new request  {{obj.name}} from {{obj.company}} at {{obj.created_at}} for:
+{% for service in services %}
+ - {{service.name}}
+{% endfor %}
+For contact use:
+phone: {{obj.phone}}
+email: {{obj.email}}
+Have a nice day,,,
+
