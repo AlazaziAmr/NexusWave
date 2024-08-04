@@ -22,74 +22,73 @@
      <div class="hero-style2">
       <h1 class="hero-title" data-ani="slideindown" data-ani-delay="0.0s">حلول إدارة المؤسسات والشركات</h1>
       <div class="btn-group" data-ani="slideindown" data-ani-delay="0.4s">
-       <a href="{% url 'website:contact-service' %}"
-          class="as-btn style3"
-         >اطلب الخدمة</a>
-       <a href="{% url 'website:website_contact' %}" class="as-btn style2">تواصل معنا</a>
+       <a href="{% url 'website:website_erp' %}"
+          class="as-btn style3">إقرأ المزيد</a>
+       <a href="#" class="as-btn style2" data-bs-toggle="modal" data-bs-target="#staticBackdrop">تجربة النظام</a>
       </div>
      </div>
     </div>
    </div>
-   <div class="as-hero-slide">
-    <div class="as-hero-bg"
-         data-bg-src="{% static 'website/coretech/assets/img/hero/hero_bg_2_02.png' %}"></div>
-    <div class="container z-index-common">
-     <div class="hero-style2">
-      <h1 class="hero-title" data-ani="slideindown" data-ani-delay="0.0s">تصميم المواقع الالكترونية والتطبيقات</h1>
-      <div class="btn-group" data-ani="slideindown" data-ani-delay="0.4s">
-        <a href="{% url 'website:contact-service' %}"
-        class="as-btn style3"
-       >اطلب الخدمة</a>
-       <a href="{% url 'website:website_contact' %}" class="as-btn style2">تواصل معنا</a>
-      </div>
-     </div>
-    </div>
-   </div>
-   <div class="as-hero-slide">
-    <div class="as-hero-bg"
-         data-bg-src="{% static 'website/coretech/assets/img/hero/hero_bg_2_03.png' %}"></div>
-    <div class="container z-index-common">
-     <div class="hero-style2">
-      <h1 class="hero-title" data-ani="slideindown" data-ani-delay="0.0s">استضافة المواقع والبريد الالكتروني</h1>
-      <div class="btn-group" data-ani="slideindown" data-ani-delay="0.4s">
-        <a href="{% url 'website:contact-service' %}"
-        class="as-btn style3"
-       >اطلب الخدمة</a>
-       <a href="{% url 'website:website_contact' %}" class="as-btn style2">تواصل معنا</a>
-      </div>
-     </div>
-    </div>
-   </div>
-   <div class="as-hero-slide">
-    <div class="as-hero-bg"
-         data-bg-src="{% static 'website/coretech/assets/img/hero/hero_bg_2_01.png' %}"></div>
-    <div class="container z-index-common">
-     <div class="hero-style2">
-      <h1 class="hero-title" data-ani="slideindown" data-ani-delay="0.0s">التصاميم والجرافكس</h1>
-      <div class="btn-group" data-ani="slideindown" data-ani-delay="0.4s">
-        <a href="{% url 'website:contact-service' %}"
-        class="as-btn style3"
-       >اطلب الخدمة</a>
-       <a href="{% url 'website:website_contact' %}" class="as-btn style2">تواصل معنا</a>
-      </div>
-     </div>
-    </div>
-   </div>
-   <div class="as-hero-slide">
-    <div class="as-hero-bg"
-         data-bg-src="{% static 'website/coretech/assets/img/hero/hero_bg_2_01.png' %}"></div>
-    <div class="container z-index-common">
-     <div class="hero-style2">
-      <h1 class="hero-title" data-ani="slideindown" data-ani-delay="0.0s">إدارة مواقع التواصل الاجتماعي</h1>
-      <div class="btn-group" data-ani="slideindown" data-ani-delay="0.4s">
-        <a href="{% url 'website:contact-service' %}"
-        class="as-btn style3"
-       >اطلب الخدمة</a>
-       <a href="{% url 'website:website_contact' %}" class="as-btn style2">تواصل معنا</a>
-      </div>
-     </div>
-    </div>
-   </div>
+{#   <div class="as-hero-slide">#}
+{#    <div class="as-hero-bg"#}
+{#         data-bg-src="{% static 'website/coretech/assets/img/hero/hero_bg_2_02.png' %}"></div>#}
+{#    <div class="container z-index-common">#}
+{#     <div class="hero-style2">#}
+{#      <h1 class="hero-title" data-ani="slideindown" data-ani-delay="0.0s">تصميم المواقع الالكترونية والتطبيقات</h1>#}
+{#      <div class="btn-group" data-ani="slideindown" data-ani-delay="0.4s">#}
+{#        <a href="{% url 'website:contact-service' %}"#}
+{#        class="as-btn style3"#}
+{#       >اطلب الخدمة</a>#}
+{#       <a href="{% url 'website:website_contact' %}" class="as-btn style2">تواصل معنا</a>#}
+{#      </div>#}
+{#     </div>#}
+{#    </div>#}
+{#   </div>#}
+{#   <div class="as-hero-slide">#}
+{#    <div class="as-hero-bg"#}
+{#         data-bg-src="{% static 'website/coretech/assets/img/hero/hero_bg_2_03.png' %}"></div>#}
+{#    <div class="container z-index-common">#}
+{#     <div class="hero-style2">#}
+{#      <h1 class="hero-title" data-ani="slideindown" data-ani-delay="0.0s">استضافة المواقع والبريد الالكتروني</h1>#}
+{#      <div class="btn-group" data-ani="slideindown" data-ani-delay="0.4s">#}
+{#        <a href="{% url 'website:contact-service' %}"#}
+{#        class="as-btn style3"#}
+{#       >اطلب الخدمة</a>#}
+{#       <a href="{% url 'website:website_contact' %}" class="as-btn style2">تواصل معنا</a>#}
+{#      </div>#}
+{#     </div>#}
+{#    </div>#}
+{#   </div>#}
+{#   <div class="as-hero-slide">#}
+{#    <div class="as-hero-bg"#}
+{#         data-bg-src="{% static 'website/coretech/assets/img/hero/hero_bg_2_01.png' %}"></div>#}
+{#    <div class="container z-index-common">#}
+{#     <div class="hero-style2">#}
+{#      <h1 class="hero-title" data-ani="slideindown" data-ani-delay="0.0s">التصاميم والجرافكس</h1>#}
+{#      <div class="btn-group" data-ani="slideindown" data-ani-delay="0.4s">#}
+{#        <a href="{% url 'website:contact-service' %}"#}
+{#        class="as-btn style3"#}
+{#       >اطلب الخدمة</a>#}
+{#       <a href="{% url 'website:website_contact' %}" class="as-btn style2">تواصل معنا</a>#}
+{#      </div>#}
+{#     </div>#}
+{#    </div>#}
+{#   </div>#}
+{#   <div class="as-hero-slide">#}
+{#    <div class="as-hero-bg"#}
+{#         data-bg-src="{% static 'website/coretech/assets/img/hero/hero_bg_2_01.png' %}"></div>#}
+{#    <div class="container z-index-common">#}
+{#     <div class="hero-style2">#}
+{#      <h1 class="hero-title" data-ani="slideindown" data-ani-delay="0.0s">إدارة مواقع التواصل الاجتماعي</h1>#}
+{#      <div class="btn-group" data-ani="slideindown" data-ani-delay="0.4s">#}
+{#        <a href="{% url 'website:contact-service' %}"#}
+{#        class="as-btn style3"#}
+{#       >اطلب الخدمة</a>#}
+{#       <a href="{% url 'website:website_contact' %}" class="as-btn style2">تواصل معنا</a>#}
+{#      </div>#}
+{#     </div>#}
+{#    </div>#}
+{#   </div>#}
   </div>
  </div>
  <div class="modal fade"
@@ -252,7 +251,7 @@
       </h2>
      </div>
      <p class="mt-n2 mb-4">
-          الموجة التالية إحدى الشركات الرائدة في مجال تطوير البرمجيات والخدمات السحابية بالإضافة للتطوير الرقمي وتطبيقات الويب والمواقع وتوفير الخدمات الإلكترونية والتسويق الإلكتروني. لتقدم حلول مصممة خصيصاً لتلبية احتياجات الشركات والمؤسسات والقطاعات التجارية والخدمية بأفضل الحلول التقنية الحديثة والخدمات الرقمية بأعلى مستويات الأداء والفعالية لعملائها.
+          الموجة المركزية إحدى الشركات الرائدة في مجال تطوير البرمجيات والخدمات السحابية بالإضافة للتطوير الرقمي وتطبيقات الويب والمواقع وتوفير الخدمات الإلكترونية والتسويق الإلكتروني. لتقدم حلول مصممة خصيصاً لتلبية احتياجات الشركات والمؤسسات والقطاعات التجارية والخدمية بأفضل الحلول التقنية الحديثة والخدمات الرقمية بأعلى مستويات الأداء والفعالية لعملائها.
 
 
 
@@ -366,7 +365,7 @@
                     <div class="item">
                         <div class="flip-card ">
                             <div class="card-front"
-                                style="background: linear-gradient(to top, rgba(0,0,0,80%), rgba(0,0,0,30%)), url('{% static 'website/coretech/assets/img/breadcum/office-2717014_960_720.jpg' %});">
+                                style="background: linear-gradient(to top, rgba(0,0,0,80%), rgba(0,0,0,30%)), url({% static 'website/coretech/assets/img/breadcum/possessed-photography-tOjIx_NyzFo-unsplash.jpg' %});">
                                 <div class="front-content">
                                     <p> تحليل البيانات الضخمة
 
@@ -650,7 +649,7 @@
                     <div class="item">
                         <div class="flip-card ">
                             <div class="card-front"
-                                style="background: linear-gradient(to top, rgba(0,0,0,80%), rgba(0,0,0,30%)), url({% static 'website/coretech/assets/img/breadcum/media-g4e908acc5_1920.jpg' %});">
+                                style="background: linear-gradient(to top, rgba(0,0,0,80%), rgba(0,0,0,30%)), url({% static 'website/coretech/assets/img/breadcum/diane-helentjaris-5f1RsK-pyZQ-unsplash.jpg' %});">
                                 <div class="front-content">
                                     <p>                
 توفير التكاليف                                    </p>
@@ -1393,9 +1392,7 @@ Blog Area
        </div>
        <div class="col-lg-auto mt-35 mt-lg-0">
         <div class="text-center">
-         <a href="{% url 'website:request-service' category="erp" %}"
-            class="as-btn style3"
-           > تجربة النظام </a>
+         <a href="#" class="as-btn style3" data-bs-toggle="modal" data-bs-target="#staticBackdrop"> تجربة النظام </a>
         </div>
        </div>
       </div>
