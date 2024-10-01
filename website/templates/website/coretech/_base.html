@@ -1,0 +1,149 @@
+{% load static %}
+<!doctype html>
+<html dir="rtl" class="no-js" lang="ar">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>{% block title %}Nexus Wave-الصفحة الرئيسية{% endblock title %}</title>
+    <meta name="author" content="Nexus Wave">
+    <meta name="description" content="Nexus Wave">
+    <meta name="keywords" content="Nexus Wave">
+    <meta name="robots" content="INDEX,FOLLOW">
+
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Favicons - Place favicon.ico in the root directory -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'website/coretech/assets/img/favicons/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'website/coretech/assets/img/favicons/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'website/coretech/assets/img/favicons/favicon-16x16.png' %}">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+
+    <!--==============================
+	  Google Fonts
+	============================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!--==============================
+	    All CSS File
+	============================== -->
+    <script src="{% static 'website/coretech/assets/js/vendor/jquery-3.6.0.min.js' %}"></script>
+    <script src="{% static 'website/coretech/assets/js/owl.carousel.js' %}"></script>
+    
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="{% static 'website/coretech/assets/css/bootstrap.rtl.min.css' %}">
+    <!-- Fontawesome Icon -->
+    <link rel="stylesheet" href="{% static 'website/coretech/assets/css/fontawesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'website/coretech/assets/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'website/coretech/assets/css/owl.theme.default.css' %}">
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" href="{% static 'website/coretech/assets/css/magnific-popup.min.css' %}">
+    <!-- Slick Slider -->
+    <link rel="stylesheet" href="{% static 'website/coretech/assets/css/slick.min.css' %}">
+    <!-- Theme Custom CSS -->
+    <link rel="stylesheet" href="{% static 'website/coretech/assets/css/style.css' %}">
+    <script src="{% static 'website/coretech/assets/js/core.js' %}"></script>
+
+</head>
+
+<body>
+
+
+    <!--[if lte IE 9]>
+    	<p class="browserupgrade">You are using an <strong>outd ated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+ <![endif]-->
+
+
+
+    <!--********************************
+   		Code Start From Here 
+	******************************** -->
+    <!--==============================
+        Preloader
+    ==============================-->
+    <div class="preloader ">
+        <button class="as-btn style3 preloaderCls"> الغاء التحميل </button>
+        <div class="preloader-inner">
+            <span class="loader"></span>
+        </div>
+    </div>
+
+    <!--==============================
+        Sidemenu
+    ============================== -->
+    {% include 'website/coretech/_header.html' %}
+
+
+    <!--  pages content  -->
+
+
+    {% block content %} {% endblock %}
+
+
+    <!--==============================
+	Footer Area
+    ==============================-->
+    {% include 'website/coretech/_footer.html' %}
+
+    <!--********************************
+			Code End  Here 
+	******************************** -->
+
+    <!-- Scroll To Top -->
+    <a href="#" class="scrollToTop scroll-btn"><i class="far fa-long-arrow-up"></i></a>
+
+    <!--==============================
+    Try system Modal
+============================== -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+          <img src="{% static 'website/coretech/assets/img/logo.png' %}" width="100" alt="core-tech">
+        <h5 class="modal-title" id="staticBackdropLabel">بيانات تسجيل الدخول للنظام</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>إسم المستخدم: demo</p>
+        <p>كلمة المرور: demo2030</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إغلاق</button>
+        <a href="https://demo.mawja.io" class="btn btn-primary">متابعة</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!--==============================
+    All Js File
+============================== -->
+    <!-- Jquery -->
+
+    <!-- Slick Slider -->
+    <script src="{% static 'website/coretech/assets/js/slick.min.js' %}"></script>
+    <!-- Bootstrap -->
+    <script src="{% static 'website/coretech/assets/js/bootstrap.min.js' %}"></script>
+    <!-- Magnific Popup -->
+    <script src="{% static 'website/coretech/assets/js/jquery.magnific-popup.min.js' %}"></script>
+
+    <!-- Isotope Filter -->
+    <script src="{% static 'website/coretech/assets/js/imagesloaded.pkgd.min.js' %}"></script>
+
+    <script src="{% static 'website/coretech/assets/js/isotope.pkgd.min.js' %}"></script>
+
+    <script src="{% static 'website/coretech/assets/js/main.js' %}"></script>
+    <script src="{% static 'website/coretech/assets/js/slider-rtl.js' %}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
+  
+</body>
+
+</html>

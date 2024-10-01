@@ -1,0 +1,117 @@
+{% load static %}
+<!--==============================
+        Mobile Menu
+    ============================== -->
+<div class="as-menu-wrapper">
+ <div class="as-menu-area text-center">
+  <button class="as-menu-toggle">
+   <i class="fal fa-times"></i>
+  </button>
+  <div class="mobile-logo">
+   <a href="{% url 'website:website_index' %}">
+    <img src="{% static 'website/coretech/assets/img/logo.png' %}" alt="core-tech">
+   </a>
+  </div>
+  <div class="as-mobile-menu">
+   <ul>
+    <li>
+     <a href="{% url 'website:website_index' %}">الصفحة الرئيسية</a>
+    </li>
+    <li>
+     <a href="{% url 'website:website_erp' %}">منصة تام التقنية</a>
+    </li>
+    <li>
+     <a href="{% url 'website:website_about' %}">من نحن</a>
+    </li>
+    <li>
+     <a href="{% url 'website:website_contact' %}">تواصل معنا</a>
+    </li>
+{#       <li>#}
+{#     <a href="https://demo.mawja.io" class="as-btn text-white" data-bs-toggle="modal" >الدخول للنظام </a>#}
+{#    </li>#}
+   </ul>
+      <div class="px-3">
+      <a href="#" class="as-btn text-white px-50" data-bs-toggle="modal" data-bs-target="#staticBackdrop">الدخول للنظام </a>
+      </div>
+  </div>
+ </div>
+</div>
+<!--==============================
+        Header Area
+    ==============================-->
+<header class="as-header header-layout2">
+ <div class="header-top">
+  <div class="container">
+   <div class="row justify-content-center justify-content-lg-between align-items-center gy-2">
+    <div class="col-auto d-none d-lg-block">
+     <p class="header-notice">
+      أفضل الحلول المصممة لعملك. <strong><a href="{% url 'website:website_contact' %}">تواصل معنا</a></strong>
+     </p>
+    </div>
+    <div class="col-auto">
+     <div class="header-social">
+      <span class="social-title ">تابعنا :</span>
+      <a target="_blank" href="#"><i class="fab fa-tiktok"></i></a>
+      <a target="_blank" href="#"><i class="fab fa-instagram"></i></a>
+      <a target="_blank" href="#"><i class="fab fa-twitter"></i></a>
+      <a target="_blank" href="#"><i class="fab fa-facebook-f"></i></a>
+     </div>
+    </div>
+   </div>
+  </div>
+ </div>
+ <div class="sticky-wrapper">
+  <div class="sticky-active">
+   <!-- Main Menu Area -->
+   <div class="container">
+    <div class="menu-area">
+     <div class="shape_before">
+      <img src="{% static 'website/coretech/assets/img/shape/header_shape_1.svg' %}"
+           alt="shape">
+     </div>
+     <div class="shape_after">
+      <img src="{% static 'website/coretech/assets/img/shape/header_shape_2.svg' %}"
+           alt="shape">
+     </div>
+     <div class="row align-items-center justify-content-between">
+      <div class="col-auto">
+       <div class="header-logo">
+        <a href="{% url 'website:website_index' %}">
+         <img src="{% static 'website/coretech/assets/img/logo.png' %}" alt="core-tech">
+        </a>
+       </div>
+      </div>
+      <div class="col-auto">
+       <nav class="main-menu d-none d-lg-inline-block">
+        <ul>
+         <li>
+          <a href="{% url 'website:website_index' %}">الصفحة الرئيسية</a>
+         </li>
+         <li>
+          <a href="{% url 'website:website_erp' %}">منصة تام التقنية</a>
+         </li>
+         <li>
+          <a href="{% url 'website:website_about' %}">من نحن</a>
+         </li>
+         <li>
+          <a href="{% url 'website:website_contact' %}">تواصل معنا</a>
+         </li>
+        </ul>
+       </nav>
+       <button type="button" class="as-menu-toggle d-inline-block d-lg-none">
+        <i class="far fa-bars"></i>
+       </button>
+      </div>
+      <div class="col-auto d-none d-xl-block">
+	     <div class="col-lg-auto mt-35 mt-lg-0">
+                                      <div class="text-center">
+                                      <a href="#" class="as-btn text-white px-50" data-bs-toggle="modal" data-bs-target="#staticBackdrop">الدخول للنظام </a>
+                                      </div>
+                                      </div>
+	  </div>
+     </div>
+    </div>
+   </div>
+  </div>
+ </div>
+</header>

@@ -1,0 +1,1540 @@
+﻿{% extends 'website/coretech/_base.html' %}
+{% block title %}  الصفحة الرئيسية{% endblock title %}
+
+{% load static %}
+{% block content %}
+ <!--==============================
+    Hero Area
+    ==============================-->
+ <div class="as-hero-wrapper hero-2">
+  <div class="hero-slider-2 as-carousel"
+       data-fade="true"
+       data-slide-show="1"
+       data-md-slide-show="1"
+       data-arrows="true"
+       data-xl-arrows="true"
+       data-ml-arrows="true"
+       data-lg-arrows="true">
+   <div class="as-hero-slide">
+    <div class="as-hero-bg"
+         data-bg-src="{% static 'website/coretech/assets/img/hero/hero_bg_2_01.png' %}"></div>
+    <div class="container z-index-common">
+     <div class="hero-style2">
+      <h1 class="hero-title" data-ani="slideindown" data-ani-delay="0.0s">حلول إدارة المؤسسات والشركات</h1>
+      <div class="btn-group" data-ani="slideindown" data-ani-delay="0.4s">
+       <a href="{% url 'website:website_erp' %}"
+          class="as-btn style3">إقرأ المزيد</a>
+       <a href="#" class="as-btn style2" data-bs-toggle="modal" data-bs-target="#staticBackdrop">تجربة النظام</a>
+      </div>
+     </div>
+    </div>
+   </div>
+{#   <div class="as-hero-slide">#}
+{#    <div class="as-hero-bg"#}
+{#         data-bg-src="{% static 'website/coretech/assets/img/hero/hero_bg_2_02.png' %}"></div>#}
+{#    <div class="container z-index-common">#}
+{#     <div class="hero-style2">#}
+{#      <h1 class="hero-title" data-ani="slideindown" data-ani-delay="0.0s">تصميم المواقع الالكترونية والتطبيقات</h1>#}
+{#      <div class="btn-group" data-ani="slideindown" data-ani-delay="0.4s">#}
+{#        <a href="{% url 'website:contact-service' %}"#}
+{#        class="as-btn style3"#}
+{#       >اطلب الخدمة</a>#}
+{#       <a href="{% url 'website:website_contact' %}" class="as-btn style2">تواصل معنا</a>#}
+{#      </div>#}
+{#     </div>#}
+{#    </div>#}
+{#   </div>#}
+{#   <div class="as-hero-slide">#}
+{#    <div class="as-hero-bg"#}
+{#         data-bg-src="{% static 'website/coretech/assets/img/hero/hero_bg_2_03.png' %}"></div>#}
+{#    <div class="container z-index-common">#}
+{#     <div class="hero-style2">#}
+{#      <h1 class="hero-title" data-ani="slideindown" data-ani-delay="0.0s">استضافة المواقع والبريد الالكتروني</h1>#}
+{#      <div class="btn-group" data-ani="slideindown" data-ani-delay="0.4s">#}
+{#        <a href="{% url 'website:contact-service' %}"#}
+{#        class="as-btn style3"#}
+{#       >اطلب الخدمة</a>#}
+{#       <a href="{% url 'website:website_contact' %}" class="as-btn style2">تواصل معنا</a>#}
+{#      </div>#}
+{#     </div>#}
+{#    </div>#}
+{#   </div>#}
+{#   <div class="as-hero-slide">#}
+{#    <div class="as-hero-bg"#}
+{#         data-bg-src="{% static 'website/coretech/assets/img/hero/hero_bg_2_01.png' %}"></div>#}
+{#    <div class="container z-index-common">#}
+{#     <div class="hero-style2">#}
+{#      <h1 class="hero-title" data-ani="slideindown" data-ani-delay="0.0s">التصاميم والجرافكس</h1>#}
+{#      <div class="btn-group" data-ani="slideindown" data-ani-delay="0.4s">#}
+{#        <a href="{% url 'website:contact-service' %}"#}
+{#        class="as-btn style3"#}
+{#       >اطلب الخدمة</a>#}
+{#       <a href="{% url 'website:website_contact' %}" class="as-btn style2">تواصل معنا</a>#}
+{#      </div>#}
+{#     </div>#}
+{#    </div>#}
+{#   </div>#}
+{#   <div class="as-hero-slide">#}
+{#    <div class="as-hero-bg"#}
+{#         data-bg-src="{% static 'website/coretech/assets/img/hero/hero_bg_2_01.png' %}"></div>#}
+{#    <div class="container z-index-common">#}
+{#     <div class="hero-style2">#}
+{#      <h1 class="hero-title" data-ani="slideindown" data-ani-delay="0.0s">إدارة مواقع التواصل الاجتماعي</h1>#}
+{#      <div class="btn-group" data-ani="slideindown" data-ani-delay="0.4s">#}
+{#        <a href="{% url 'website:contact-service' %}"#}
+{#        class="as-btn style3"#}
+{#       >اطلب الخدمة</a>#}
+{#       <a href="{% url 'website:website_contact' %}" class="as-btn style2">تواصل معنا</a>#}
+{#      </div>#}
+{#     </div>#}
+{#    </div>#}
+{#   </div>#}
+  </div>
+ </div>
+ <div class="modal fade"
+      id="exampleModal1"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+  <div class="modal-dialog" role="document">
+   <div class="modal-content">
+     <div class="modal-header">
+          <div class="modal-title " id="exampleModalLabel">
+           <img src="{% static 'website/coretech/assets/img/logo.png' %}" style="width:95px">
+          </div>
+          <h5 class="mr-5">
+               اطلب الخدمة المطلوبة وسيتم التواصل معك
+          </h5>
+          <button type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close">
+          </button>
+         </div>
+    <div class="modal-body">
+     <form action="#" method="POST" class=" ">
+      <div class="row">
+       <div class="form-group col-md-6">
+        <input type="text"
+               class="form-control"
+               name="name"
+               id="name"
+               placeholder="الاسم">
+        <i class="fal fa-user"></i>
+       </div>
+       <div class="form-group  col-md-6">
+        <input type="email"
+               class="form-control"
+               name="email"
+               id="email"
+               placeholder="عنوان البريد الإلكتروني">
+        <i class="fal fa-envelope"></i>
+       </div>
+       <div class="form-group  col-md-6">
+        <input type="number"
+               class="form-control"
+               name="phone"
+               id="phone"
+               placeholder="رقم الهاتف">
+        <i class="fal fa-phone"></i>
+       </div>
+       <div class="form-group  col-md-6">
+        <input type="text"
+               class="form-control"
+               name="company"
+               id="company"
+               placeholder="اسم الشركة/ المؤسسة ">
+        <i class="fal fa-comment"></i>
+       </div>
+       <div class="form-group col-12">
+          اختر الخدمة المطلوبة
+          <div class="row">
+              <div class="col-md-6">
+                  <div class="form-check mt-3">
+                      <input class="form-check-input" type="checkbox" value=""
+                          id="ip">
+                      <label class="form-check-label" for="ip">
+                          نظام ادارة المؤسسات والشركات
+                      </label>
+                  </div>
+              </div>
+              <div class="col-md-6">
+                  <div class="form-check mt-3">
+                      <input class="form-check-input" type="checkbox" value=""
+                          id="io">
+                      <label class="form-check-label" for="io">
+                          التسويق الالكتروني
+                      </label>
+                  </div>
+              </div>
+              <div class="col-md-6">
+                  <div class="form-check mt-3">
+                      <input class="form-check-input" type="checkbox" value=""
+                          id="po">
+                      <label class="form-check-label" for="po">
+                          تصميم المواقع الالكترونية والتطبيقات
+                      </label>
+                  </div>
+              </div>
+              <div class="col-md-6">
+                  <div class="form-check mt-3">
+                      <input class="form-check-input" type="checkbox" value=""
+                          id="pu">
+                      <label class="form-check-label" for="pu">
+                          استضافة المواقع والبريد الالكتروني
+                      </label>
+                  </div>
+              </div>
+              <div class="col-md-6">
+                  <div class="form-check mt-3">
+                      <input class="form-check-input" type="checkbox" value=""
+                          id="pl">
+                      <label class="form-check-label" for="pl">
+                          التصاميم والجرافكس
+                      </label>
+                  </div>
+              </div>
+              <div class="col-md-6">
+
+                  <div class="form-check mt-3">
+                      <input class="form-check-input" type="checkbox" value=""
+                          id="ps">
+                      <label class="form-check-label" for="ps">
+                          إدارة السوشيال ميديا
+                      </label>
+                  </div>
+              </div>
+          </div>
+
+      </div>
+       <div class="form-btn col-12">
+        <button class="as-btn">
+         ارسل الخدمة
+        </button>
+       </div>
+      </div>
+      <p class="form-messages mb-0 mt-3">
+      </p>
+     </form>
+    </div>
+   </div>
+  </div>
+ </div>
+ <!--======== / Hero Section ========-->
+ <!--==============================
+    About Area  
+    ==============================-->
+ <div class="overflow-hidden space">
+  <div class="container">
+   <div class="row align-items-center">
+    <div class="col-xl-7 pe-xxl-5">
+     <div class="img-box3">
+      <div class="img1">
+       <img src="{% static 'website/coretech/assets/img/normal/about_2_1.jpg' %}"
+            alt="About">
+      </div>
+      <div class="shape1">
+       <img src="{% static 'website/coretech/assets/img/shape/Asset 5-8.png' %}"
+            alt="shape">
+      </div>
+      <div class="about-counter1">
+       <h2 class="counter-text">
+       </h2>
+      </div>
+     </div>
+    </div>
+    <div class="col-xl-5">
+     <div class="title-area mb-30 ">
+      <h2 class="sec-title text-start">
+       من نحن
+      </h2>
+     </div>
+     <p class="mt-n2 mb-4">
+          الموجة المركزية إحدى الشركات الرائدة في مجال تطوير البرمجيات والخدمات السحابية بالإضافة للتطوير الرقمي وتطبيقات الويب والمواقع وتوفير الخدمات الإلكترونية والتسويق الإلكتروني. لتقدم حلول مصممة خصيصاً لتلبية احتياجات الشركات والمؤسسات والقطاعات التجارية والخدمية بأفضل الحلول التقنية الحديثة والخدمات الرقمية بأعلى مستويات الأداء والفعالية لعملائها.
+
+
+
+
+                      
+          نحن مجموعة من خبراء التقنية يجمعهم هدف ورؤية مشتركة لتطوير الخدمات الحاسوبية تحت اطر واسس تعمل على تلبية احتياجات رواد الاعمال والقطاع الخاص والدفع بعجلة التطوير الرقمي نحو تحقيق رؤية 2030.
+                                 
+  
+     </p>
+     <div class="btn-wrap mt-30">
+      <a href="{% url 'website:website_about' %}" class="as-btn style4">المزيد</a>
+     </div>
+    </div>
+   </div>
+  </div>
+ </div>
+ <section>
+ 
+ </section>
+ 
+    <section class="vision-programs-section">
+        <div class="vision-programs-inner">
+            <div class="vision-left">
+                <h2 data-aos="fade-right" data-aos-duration="500" data-aos-easing="linear"
+                    data-aos-anchor-placement="top-bottom" data-aos-once="true" class="aos-init aos-animate">
+تام والذكاء الاصطناعي               </h2>
+                <div class="slider-1-nav">
+                    <a class="slider-1-prev" id="prev-slide">
+                        <img src="{% static 'website/coretech/assets/img/icon/prev-arrow.svg' %}">
+                        </a>
+                    <a id="next-slide" class="slider-1-next " >
+                    <img src="{% static 'website/coretech/assets/img/icon/next-arrow.svg' %}">
+                    </a>
+                 
+                    </div>
+            </div>
+            <div class="vision-right">
+                <div class="owl-carousel owl-theme owl-rtl owl-loaded owl-drag">
+                    <div class="item">
+                        <div class="flip-card ">
+                            <div class="card-front"
+                                style="background: linear-gradient(to top, rgba(0,0,0,80%), rgba(0,0,0,30%)), url({% static 'website/coretech/assets/img/erpsystem/erp.jpg' %});">
+                                <div class="front-content">
+                                    <p>     إدارة المخزون
+
+ </p>
+                                    <a href="javascript:;" class="animated-link">
+                                        <span>
+                                            <small>
+                                                <i>
+                                                    <svg width="15" height="13" viewBox="0 0 15 13" fill="transparent"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <g opacity="1">
+                                                            <path opacity="1" d="M1.94338 6.49071L12.6896 6.50974"
+                                                                stroke="#f9c450" stroke-width="2"
+                                                                stroke-linecap="round"></path>
+                                                            <path opacity="1"
+                                                                d="M9.17697 1.80839L13.6241 6.36666L9.42935 10.6663"
+                                                                stroke="#f9c450" stroke-width="2" stroke-linecap="round"
+                                                                stroke-linejoin="round">
+                                                            </path>
+                                                        </g>
+                                                    </svg>
+                                                </i>
+                                            </small>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <div class="card-back-content">
+                                    <img src="{% static 'website/coretech/assets/img/logo.png' %}">
+                                    <h4>
+                                       إدارة المخزون:
+
+
+                                                                        </h4>
+                               							   <p>
+														   
+التحكم في المخزون: يساعد الذكاء الاصطناعي في تحسين إدارة المخزون من خلال التنبؤ بالاحتياجات وتقليل الفاقد.
+</br>
+تحليل العرض والطلب: تحليل الأنماط السابقة لتحديد أفضل الأوقات للشراء والتخزين.                                                                  </p>
+                                    <div class="link-container">
+                                        <a href="#" class="animated-link">
+                                            <strong>تفاصيل الخدمة</strong>
+                                            <span>
+                                                <small>
+                                                    <i>
+                                                        <svg width="15" height="13" viewBox="0 0 15 13"
+                                                            fill="transparent" xmlns="http://www.w3.org/2000/svg">
+                                                            <g opacity="1">
+                                                                <path opacity="1" d="M1.94338 6.49071L12.6896 6.50974"
+                                                                    stroke="#f9c450" stroke-width="2"
+                                                                    stroke-linecap="round"></path>
+                                                                <path opacity="1"
+                                                                    d="M9.17697 1.80839L13.6241 6.36666L9.42935 10.6663"
+                                                                    stroke="#f9c450" stroke-width="2"
+                                                                    stroke-linecap="round" stroke-linejoin="round">
+                                                                </path>
+                                                            </g>
+                                                        </svg>
+                                                    </i>
+                                                </small>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="flip-card ">
+                            <div class="card-front"
+                                style="background: linear-gradient(to top, rgba(0,0,0,80%), rgba(0,0,0,30%)), url({% static 'website/coretech/assets/img/breadcum/possessed-photography-tOjIx_NyzFo-unsplash.jpg' %});">
+                                <div class="front-content">
+                                    <p> تحليل البيانات الضخمة
+
+</p>
+                                    <a href="javascript:;" class="animated-link">
+                                        <span>
+                                            <small>
+                                                <i>
+                                                    <svg width="15" height="13" viewBox="0 0 15 13" fill="transparent"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <g opacity="1">
+                                                            <path opacity="1" d="M1.94338 6.49071L12.6896 6.50974"
+                                                                stroke="#f9c450" stroke-width="2"
+                                                                stroke-linecap="round"></path>
+                                                            <path opacity="1"
+                                                                d="M9.17697 1.80839L13.6241 6.36666L9.42935 10.6663"
+                                                                stroke="#f9c450" stroke-width="2" stroke-linecap="round"
+                                                                stroke-linejoin="round">
+                                                            </path>
+                                                        </g>
+                                                    </svg>
+                                                </i>
+                                            </small>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <div class="card-back-content">
+                                    <img src="{% static 'website/coretech/assets/img/logo.png' %}">
+                                    <h4>
+                                             تحليل البيانات الضخمة
+                                    </h4>
+                                    <p>
+استخراج رؤى قيمة: تحليل البيانات الضخمة لاستخراج رؤى تساعد في تحسين العمليات واتخاذ قرارات استراتيجية.
+                                    </p>
+                                    <div class="link-container">
+                                        <a href="#" class="animated-link">
+                                            <strong>تفاصيل الخدمة</strong>
+                                            <span>
+                                                <small>
+                                                    <i>
+                                                        <svg width="15" height="13" viewBox="0 0 15 13"
+                                                            fill="transparent" xmlns="http://www.w3.org/2000/svg">
+                                                            <g opacity="1">
+                                                                <path opacity="1" d="M1.94338 6.49071L12.6896 6.50974"
+                                                                    stroke="#f9c450" stroke-width="2"
+                                                                    stroke-linecap="round"></path>
+                                                                <path opacity="1"
+                                                                    d="M9.17697 1.80839L13.6241 6.36666L9.42935 10.6663"
+                                                                    stroke="#f9c450" stroke-width="2"
+                                                                    stroke-linecap="round" stroke-linejoin="round">
+                                                                </path>
+                                                            </g>
+                                                        </svg>
+                                                    </i>
+                                                </small>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="flip-card ">
+                            <div class="card-front"
+                                style="background: linear-gradient(to top, rgba(0,0,0,80%), rgba(0,0,0,30%)), url({% static 'website/coretech/assets/img/breadcum/istockphoto-1133924836-170667a.jpg' %});">
+                                <div class="front-content">
+                                    <p>                                           تعزيز اتخاذ القرارات
+
+
+                                    </p>
+                                    <a href="javascript:;" class="animated-link">
+                                        <span>
+                                            <small>
+                                                <i>
+                                                    <svg width="15" height="13" viewBox="0 0 15 13" fill="transparent"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <g opacity="1">
+                                                            <path opacity="1" d="M1.94338 6.49071L12.6896 6.50974"
+                                                                stroke="#f9c450" stroke-width="2"
+                                                                stroke-linecap="round"></path>
+                                                            <path opacity="1"
+                                                                d="M9.17697 1.80839L13.6241 6.36666L9.42935 10.6663"
+                                                                stroke="#f9c450" stroke-width="2" stroke-linecap="round"
+                                                                stroke-linejoin="round">
+                                                            </path>
+                                                        </g>
+                                                    </svg>
+                                                </i>
+                                            </small>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <div class="card-back-content">
+                                    <img src="{% static 'website/coretech/assets/img/logo.png' %}">
+                                    <h4>
+                                      تعزيز اتخاذ القرارات
+
+
+                                    </h4>
+                                    <p>
+1. رؤى مستندة إلى البيانات:
+   - تحلل خوارزميات الذكاء الاصطناعي كميات كبيرة من البيانات من مختلف وحدات منصة تام، وتوفر رؤى قابلة للتنفيذ.
+</br>
+2. تحليلات في الوقت الحقيقي:
+   - يمكّن الذكاء الاصطناعي من معالجة البيانات في الوقت الفعلي، مما يوفر رؤى فورية ويسمح باتخاذ قرارات سريعة.
+</br>
+3. تقارير متقدمة
+
+   </p>
+                                    <div class="link-container">
+                                        <a href="#" class="animated-link">
+                                            <strong>تفاصيل الخدمة</strong>
+                                            <span>
+                                                <small>
+                                                    <i>
+                                                        <svg width="15" height="13" viewBox="0 0 15 13"
+                                                            fill="transparent" xmlns="http://www.w3.org/2000/svg">
+                                                            <g opacity="1">
+                                                                <path opacity="1" d="M1.94338 6.49071L12.6896 6.50974"
+                                                                    stroke="#f9c450" stroke-width="2"
+                                                                    stroke-linecap="round"></path>
+                                                                <path opacity="1"
+                                                                    d="M9.17697 1.80839L13.6241 6.36666L9.42935 10.6663"
+                                                                    stroke="#f9c450" stroke-width="2"
+                                                                    stroke-linecap="round" stroke-linejoin="round">
+                                                                </path>
+                                                            </g>
+                                                        </svg>
+                                                    </i>
+                                                </small>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="flip-card ">
+                            <div class="card-front"
+                                style="background: linear-gradient(to top, rgba(0,0,0,80%), rgba(0,0,0,30%)), url({% static 'website/coretech/assets/img/breadcum/istockphoto-1252202552-170667a.jpg' %});">
+                                <div class="front-content">
+                                    <p>           
+ المساعد الذكي                                    </p>
+                                    <a href="javascript:;" class="animated-link">
+                                        <span>
+                                            <small>
+                                                <i>
+                                                    <svg width="15" height="13" viewBox="0 0 15 13" fill="transparent"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <g opacity="1">
+                                                            <path opacity="1" d="M1.94338 6.49071L12.6896 6.50974"
+                                                                stroke="#f9c450" stroke-width="2"
+                                                                stroke-linecap="round"></path>
+                                                            <path opacity="1"
+                                                                d="M9.17697 1.80839L13.6241 6.36666L9.42935 10.6663"
+                                                                stroke="#f9c450" stroke-width="2" stroke-linecap="round"
+                                                                stroke-linejoin="round">
+                                                            </path>
+                                                        </g>
+                                                    </svg>
+                                                </i>
+                                            </small>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <div class="card-back-content">
+                                    <img src="{% static 'website/coretech/assets/img/logo.png' %}">
+                                    <h4>
+المساعد الذكي                                                           </h4>
+                                    <p>
+   - توفر الدردشة الآلية والمساعدين الافتراضيين المدعومين بالذكاء الاصطناعي الدعم في الوقت الحقيقي للمستخدمين، وتجيب على الاستفسارات وترشدهم خلال العمليات المعقدة.
+   </br>
+   - يقلل ذلك من الاعتماد على الدعم البشري ويسرع حل المشكلات.
+
+   </p>
+                                    <div class="link-container">
+                                        <a href="#" class="animated-link">
+                                            <strong>تفاصيل الخدمة</strong>
+                                            <span>
+                                                <small>
+                                                    <i>
+                                                        <svg width="15" height="13" viewBox="0 0 15 13"
+                                                            fill="transparent" xmlns="http://www.w3.org/2000/svg">
+                                                            <g opacity="1">
+                                                                <path opacity="1" d="M1.94338 6.49071L12.6896 6.50974"
+                                                                    stroke="#f9c450" stroke-width="2"
+                                                                    stroke-linecap="round"></path>
+                                                                <path opacity="1"
+                                                                    d="M9.17697 1.80839L13.6241 6.36666L9.42935 10.6663"
+                                                                    stroke="#f9c450" stroke-width="2"
+                                                                    stroke-linecap="round" stroke-linejoin="round">
+                                                                </path>
+                                                            </g>
+                                                        </svg>
+                                                    </i>
+                                                </small>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="flip-card ">
+                            <div class="card-front"
+                                style="background: linear-gradient(to top, rgba(0,0,0,80%), rgba(0,0,0,30%)), url({% static 'website/coretech/assets/img/breadcum/istockphoto-1194380325-170667a.jpg' %});">
+                                <div class="front-content">
+                                    <p>           
+تعزيز أمان البيانات                                                                  </p>
+                                    <a href="javascript:;" class="animated-link">
+                                        <span>
+                                            <small>
+                                                <i>
+                                                    <svg width="15" height="13" viewBox="0 0 15 13" fill="transparent"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <g opacity="1">
+                                                            <path opacity="1" d="M1.94338 6.49071L12.6896 6.50974"
+                                                                stroke="#f9c450" stroke-width="2"
+                                                                stroke-linecap="round"></path>
+                                                            <path opacity="1"
+                                                                d="M9.17697 1.80839L13.6241 6.36666L9.42935 10.6663"
+                                                                stroke="#f9c450" stroke-width="2" stroke-linecap="round"
+                                                                stroke-linejoin="round">
+                                                            </path>
+                                                        </g>
+                                                    </svg>
+                                                </i>
+                                            </small>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <div class="card-back-content">
+                                    <img src="{% static 'website/coretech/assets/img/logo.png' %}">
+                                    <h4>
+تعزيز أمان البيانات                                                                           </h4>
+                                    <p>
+   - يراقب الذكاء الاصطناعي أنشطة العملاء في منصة تام لاكتشاف الأنماط غير العادية التي قد تشير إلى تهديدات أمنية.
+   </br>
+   - يساعد الاكتشاف المبكر للشذوذ في منع خروقات البيانات والهجمات السيبرانية.
+
+   </p>
+                                    <div class="link-container">
+                                        <a href="#" class="animated-link">
+                                            <strong>تفاصيل الخدمة</strong>
+                                            <span>
+                                                <small>
+                                                    <i>
+                                                        <svg width="15" height="13" viewBox="0 0 15 13"
+                                                            fill="transparent" xmlns="http://www.w3.org/2000/svg">
+                                                            <g opacity="1">
+                                                                <path opacity="1" d="M1.94338 6.49071L12.6896 6.50974"
+                                                                    stroke="#f9c450" stroke-width="2"
+                                                                    stroke-linecap="round"></path>
+                                                                <path opacity="1"
+                                                                    d="M9.17697 1.80839L13.6241 6.36666L9.42935 10.6663"
+                                                                    stroke="#f9c450" stroke-width="2"
+                                                                    stroke-linecap="round" stroke-linejoin="round">
+                                                                </path>
+                                                            </g>
+                                                        </svg>
+                                                    </i>
+                                                </small>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="flip-card ">
+                            <div class="card-front"
+                                style="background: linear-gradient(to top, rgba(0,0,0,80%), rgba(0,0,0,30%)), url({% static 'website/coretech/assets/img/breadcum/diane-helentjaris-5f1RsK-pyZQ-unsplash.jpg' %});">
+                                <div class="front-content">
+                                    <p>                
+توفير التكاليف                                    </p>
+                                    <a href="javascript:;" class="animated-link">
+                                        <span>
+                                            <small>
+                                                <i>
+                                                    <svg width="15" height="13" viewBox="0 0 15 13" fill="transparent"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <g opacity="1">
+                                                            <path opacity="1" d="M1.94338 6.49071L12.6896 6.50974"
+                                                                stroke="#f9c450" stroke-width="2"
+                                                                stroke-linecap="round"></path>
+                                                            <path opacity="1"
+                                                                d="M9.17697 1.80839L13.6241 6.36666L9.42935 10.6663"
+                                                                stroke="#f9c450" stroke-width="2" stroke-linecap="round"
+                                                                stroke-linejoin="round">
+                                                            </path>
+                                                        </g>
+                                                    </svg>
+                                                </i>
+                                            </small>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <div class="card-back-content">
+                                    <img src="{% static 'website/coretech/assets/img/logo.png' %}">
+                                    <h4>
+توفير التكاليف                                    </h4>
+                                    <p>
+
+
+
+   - تقلل الصيانة التنبؤية من الحاجة إلى الإصلاحات الطارئة وتطيل عمر الأصول، مما يؤدي إلى توفير كبير في التكاليف.
+   </br>
+   - يمكن للشركات تخصيص ميزانيات الصيانة بشكل أكثر فعالية، مع التركيز على المناطق التي تتطلب الاهتمام.
+
+
+   <div class="link-container">
+                                        <a href="#" class="animated-link">
+                                            <strong>تفاصيل الخدمة</strong>
+                                            <span>
+                                                <small>
+                                                    <i>
+                                                        <svg width="15" height="13" viewBox="0 0 15 13"
+                                                            fill="transparent" xmlns="http://www.w3.org/2000/svg">
+                                                            <g opacity="1">
+                                                                <path opacity="1" d="M1.94338 6.49071L12.6896 6.50974"
+                                                                    stroke="#f9c450" stroke-width="2"
+                                                                    stroke-linecap="round"></path>
+                                                                <path opacity="1"
+                                                                    d="M9.17697 1.80839L13.6241 6.36666L9.42935 10.6663"
+                                                                    stroke="#f9c450" stroke-width="2"
+                                                                    stroke-linecap="round" stroke-linejoin="round">
+                                                                </path>
+                                                            </g>
+                                                        </svg>
+                                                    </i>
+                                                </small>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+              
+			  
+                    <div class="item">
+                        <div class="flip-card ">
+                            <div class="card-front"
+                                style="background: linear-gradient(to top, rgba(0,0,0,80%), rgba(0,0,0,30%)), url({% static 'website/coretech/assets/img/breadcum/istockphoto-1194380325-170667a.jpg' %});">
+                                <div class="front-content">
+                                    <p>           
+التنبؤ بالطلب
+                                    <a href="javascript:;" class="animated-link">
+                                        <span>
+                                            <small>
+                                                <i>
+                                                    <svg width="15" height="13" viewBox="0 0 15 13" fill="transparent"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <g opacity="1">
+                                                            <path opacity="1" d="M1.94338 6.49071L12.6896 6.50974"
+                                                                stroke="#f9c450" stroke-width="2"
+                                                                stroke-linecap="round"></path>
+                                                            <path opacity="1"
+                                                                d="M9.17697 1.80839L13.6241 6.36666L9.42935 10.6663"
+                                                                stroke="#f9c450" stroke-width="2" stroke-linecap="round"
+                                                                stroke-linejoin="round">
+                                                            </path>
+                                                        </g>
+                                                    </svg>
+                                                </i>
+                                            </small>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <div class="card-back-content">
+                                    <img src="{% static 'website/coretech/assets/img/logo.png'%}">
+                                    <h4>
+التنبؤ بالطلب
+                                    <p>
+   - يحلل الذكاء الاصطناعي بيانات المبيعات التاريخية واتجاهات السوق للتنبؤ بدقة بالطلب المستقبلي.
+      </br>
+
+   - يساعد ذلك الشركات في الحفاظ على مستويات المخزون المثلى، مما يقلل من حالات نفاد المخزون وفائضه.
+   
+
+   </p>
+                                    <div class="link-container">
+                                        <a href="#" class="animated-link">
+                                            <strong>تفاصيل الخدمة</strong>
+                                            <span>
+                                                <small>
+                                                    <i>
+                                                        <svg width="15" height="13" viewBox="0 0 15 13"
+                                                            fill="transparent" xmlns="http://www.w3.org/2000/svg">
+                                                            <g opacity="1">
+                                                                <path opacity="1" d="M1.94338 6.49071L12.6896 6.50974"
+                                                                    stroke="#f9c450" stroke-width="2"
+                                                                    stroke-linecap="round"></path>
+                                                                <path opacity="1"
+                                                                    d="M9.17697 1.80839L13.6241 6.36666L9.42935 10.6663"
+                                                                    stroke="#f9c450" stroke-width="2"
+                                                                    stroke-linecap="round" stroke-linejoin="round">
+                                                                </path>
+                                                            </g>
+                                                        </svg>
+                                                    </i>
+                                                </small>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+					
+         
+              
+
+                </div>
+
+            </div>
+
+        </div>
+       
+      
+    </section>
+
+ <!--==============================
+Blog Area  
+==============================-->
+ <section class="space-bottom mt-3">
+  <div class="container">
+   <div class="row">
+    <div class="col-xxl-12 col-lg-12">
+     <div class="page-single mt-5">
+      <div class="row">
+       <div class="col-md-12 text-center">
+        <div class="outer page-title text-center h3">
+            تعرف على                             
+			<img src="{% static 'website/coretech/assets/img/tam.png' %}" width="200">
+            <hr class="line"/>
+
+        </div>
+       </div>
+       <div class="col-md-6 mt-auto mb-auto">
+        <div class="page-content">
+         <h2 class="h3  page-title">
+          منصة متكاملة واحدة لادارة جميع انشطتك :
+         </h2>
+         <p>
+         منصة تام سهلة الاستخدام.لا تحتاج إلى تحميل، فقط يتطلب أن يكون الجهاز متصل بشبكة الانترنت ويمكنك الدخول على حسابك ومتابعة  أداء مؤسستك من أي مكان وفي أي وقت بسهولة وفي أمان تام
+         </p>
+         <!--==============================
+    Project Area  
+==============================-->
+         <!--==============================
+        Price Area  
+==============================-->
+        </div>
+       </div>
+       <div class="col-md-6 mt-5">
+        <div class="page-img">
+         <div class="as-hero-wrapper hero-2">
+          <div class="hero-slider-2 as-carousel"
+               data-fade="true"
+               data-slide-show="1"
+               data-md-slide-show="1"
+               data-arrows="true"
+               data-xl-arrows="true"
+               data-ml-arrows="true"
+               data-lg-arrows="true">
+           <div class="as-hero-slide">
+            <div class="as-hero-bg custom-height"
+                 data-bg-src="{% static 'website/coretech/assets/img/erpsystem/systemeerp.png' %}">
+            </div>
+            <div class="container container-slider z-index-common">
+             <div class="hero-style7">
+             
+             </div>
+            </div>
+           </div>
+           <div class="as-hero-slide">
+            <div class="as-hero-bg custom-height"
+                 data-bg-src="{% static 'website/coretech/assets/img/erpsystem/systemeerp.png' %}">
+            </div>
+            <div class="container container-slider z-index-common">
+             <div class="hero-style7">
+             
+             </div>
+            </div>
+           </div>
+           <div class="as-hero-slide">
+            <div class="as-hero-bg custom-height"
+                 data-bg-src="{% static 'website/coretech/assets/img/erpsystem/systemeerp.png' %}">
+            </div>
+            <div class="container container-slider z-index-common">
+             <div class="hero-style7">
+            
+             </div>
+            </div>
+           </div>
+           <div class="as-hero-slide">
+            <div class="as-hero-bg custom-height"
+                 data-bg-src="{% static 'website/coretech/assets/img/erpsystem/systemeerp.png' %}">
+            </div>
+            <div class="container container-slider z-index-common">
+             <div class="hero-style7">
+           
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <br />
+    </div>
+   </section>
+<section>   
+    <div class="cta-wrap">
+      <div class="container">
+       <div class="row w-100 gx-0 align-items-center">
+        <div class="col-lg text-center text-lg-start">
+         <div class="container">
+          <div class="row">
+           <h3 class="d-flex">
+            عبر منصة تام يمكنك ادارة
+            <div style="margin-right: 20px;" id="typewriter">
+            </div>
+           </h3>
+          </div>
+          <script type="text/javascript">
+                                   const instance = new Typewriter('#typewriter', {
+                                       strings: ['<span class="wrapper"><span class="span-1">مؤسساتك وشركاتك </span>', '<span class="span-2">موظفيك وعملائك </span> ', '<span class="span-3">منتجاتك وخدماتك</span>', '<span class="span-3">مبيعاتك وارباحك</span>'],
+                                       autoStart: true,
+                                       loop: true,
+                                   });
+          </script>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div></section>
+   <section class="mt-5 mb-5">
+    <div class="container">
+     <div class="title-area text-center">
+      <h2 class="sec-title">
+      بعض القطاعات التي تستهدفها منصة تام
+      </h2>
+     </div>
+     <div class="row gy-4 justify-content-center">
+      <div class="col-sm-6 col-lg-4 col-xl-2">
+       <div class="service-card " style="    height: 83%;min-height: 134px;">
+        <div class="service-card_icon icon-custom text-center">
+         <i class="fa-regular fa-cars"></i>
+        </div>
+        <h3 class="service-card_title font-size-15 text-center">
+         معارض بيع السيارات
+        </h3>
+       </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 col-xl-2">
+       <div class="service-card " style="    height: 83%;min-height: 134px;">
+        <div class="service-card_icon icon-custom text-center">
+         <i class="fa-regular fa-truck-fast"></i>
+        </div>
+        <h3 class="service-card_title font-size-15 text-center">
+         الشحن واللوجستيات
+        </h3>
+       </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 col-xl-2">
+       <div class="service-card " style="    height: 83%;min-height: 134px;">
+        <div class="service-card_icon icon-custom text-center">
+         <i class="fa-regular fa-laptop-mobile"></i>
+        </div>
+        <h3 class="service-card_title font-size-15 text-center">
+         ادارة محلات الجوالات
+        </h3>
+       </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 col-xl-2">
+       <div class="service-card " style="    height: 83%;min-height: 134px;">
+        <div class="service-card_icon icon-custom text-center">
+         <i class="fa-solid fa-car-wrench"></i>
+        </div>
+        <h3 class="service-card_title font-size-15 text-center">
+         محلات قطع غيار السيارات
+        </h3>
+       </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 col-xl-2">
+       <div class="service-card " style="    height: 83%;min-height: 134px;">
+        <div class="service-card_icon icon-custom text-center">
+         <i class="fa-solid fa-shop"></i>
+        </div>
+        <h3 class="service-card_title font-size-15 text-center">
+         المتاجر التجارية بمختلف انواعها )
+        </h3>
+       </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 col-xl-2">
+       <div class="service-card " style="    height: 83%;min-height: 134px;">
+        <div class="service-card_icon icon-custom text-center">
+         <i class="fa-regular fa-fan-table"></i>
+        </div>
+        <h3 class="service-card_title font-size-15 text-center">
+         مراكز تركيب وصيانة أجهزة التكييف
+        </h3>
+       </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 col-xl-2">
+       <div class="service-card " style="    height: 83%;min-height: 134px;">
+        <div class="service-card_icon icon-custom text-center">
+         <i class="fa-regular fa-bed-front"></i>
+        </div>
+        <h3 class="service-card_title font-size-15 text-center">
+         ورش الموبيلايا
+        </h3>
+       </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 col-xl-2">
+       <div class="service-card " style="    height: 83%;min-height: 134px;">
+        <div class="service-card_icon icon-custom text-center">
+         <i class="fa-regular fa-rings-wedding"></i>
+        </div>
+        <h3 class="service-card_title font-size-15 text-center">
+         محلات الذهب والمجوهرات
+        </h3>
+       </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 col-xl-2">
+       <div class="service-card " style="    height: 83%;min-height: 134px;">
+        <div class="service-card_icon icon-custom text-center">
+         <i class="fa-regular fa-notes-medical"></i>
+         <h3 class="service-card_title font-size-15 text-center">
+          معامل التحاليل الطبية
+         </h3>
+        </div>
+       </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 col-xl-2">
+       <div class="service-card " style="    height: 83%;min-height: 134px;">
+        <div class="service-card_icon icon-custom text-center">
+         <i class="fa-regular fa-computer-speaker"></i>
+         <h3 class="service-card_title font-size-15 text-center">
+          محلات الكمبيوتر
+         </h3>
+        </div>
+       </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 col-xl-2">
+       <div class="service-card " style="    height: 83%;min-height: 134px;">
+        <div class="service-card_icon icon-custom text-center">
+         <i class="fa-light fa-file-invoice"></i>
+         <h3 class="service-card_title font-size-15 text-center">
+          مكاتب المحاسبة
+         </h3>
+        </div>
+       </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 col-xl-2">
+       <div class="service-card " style="    height: 83%;min-height: 134px;">
+        <div class="service-card_icon icon-custom text-center">
+         <i class="fa-regular fa-car-building"></i>
+         <h3 class="service-card_title font-size-15 text-center">
+          تأجير السيارات والليموزين
+         </h3>
+        </div>
+       </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 col-xl-2">
+       <div class="service-card " style="    height: 83%;min-height: 134px;">
+        <div class="service-card_icon icon-custom text-center">
+         <i class="fa-light fa-image-landscape"></i>
+         <h3 class="service-card_title font-size-15 text-center">
+          مشاريع اللاند سكيب
+         </h3>
+        </div>
+       </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 col-xl-2">
+       <div class="service-card " style="    height: 83%;min-height: 134px;">
+        <div class="service-card_icon icon-custom text-center">
+         <i class="fa-regular fa-droplet"></i>
+         <h3 class="service-card_title font-size-15 text-center">
+          شركات فلاتر المياه
+         </h3>
+        </div>
+       </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 col-xl-2">
+       <div class="service-card " style="    height: 83%;min-height: 134px;">
+        <div class="service-card_icon icon-custom text-center">
+         <i class="fa-regular fa-taxi-bus"></i>
+         <h3 class="service-card_title font-size-15 text-center">
+          النقل والمواصلات
+         </h3>
+        </div>
+       </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 col-xl-2">
+       <div class="service-card " style="    height: 83%;min-height: 134px;">
+        <div class="service-card_icon icon-custom text-center">
+         <i class="fa-regular fa-cart-shopping-fast"></i>
+         <h3 class="service-card_title font-size-15 text-center">
+          المتاجر الالكترونية
+         </h3>
+        </div>
+       </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 col-xl-2">
+       <div class="service-card " style="    height: 83%;min-height: 134px;">
+        <div class="service-card_icon icon-custom text-center">
+         <i class="fa-regular fa-paint-roller"></i>
+         <h3 class="service-card_title font-size-15 text-center">
+          الدهانات
+         </h3>
+        </div>
+       </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 col-xl-2">
+       <div class="service-card " style="    height: 83%;min-height: 134px;">
+        <div class="service-card_icon icon-custom text-center">
+         <i class="fa-regular fa-tablets"></i>
+         <h3 class="service-card_title font-size-15 text-center">
+          الصيدليات
+         </h3>
+        </div>
+       </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 col-xl-2">
+       <div class="service-card " style="    height: 83%;min-height: 134px;">
+        <div class="service-card_icon icon-custom text-center">
+         <i class="fa-regular fa-glasses"></i>
+         <h3 class="service-card_title font-size-15 text-center">
+          محلات النظارات والبصريات
+         </h3>
+        </div>
+       </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 col-xl-2">
+       <div class="service-card " style="    height: 83%;min-height: 134px;">
+        <div class="service-card_icon icon-custom text-center">
+         <i class="fa-solid fa-bags-shopping"></i>
+         <h3 class="service-card_title font-size-15 text-center">
+          مراكز التجميل والمشاغل النسائية
+         </h3>
+        </div>
+       </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 col-xl-2">
+       <div class="service-card " style="    height: 83%;min-height: 134px;">
+        <div class="service-card_icon icon-custom text-center">
+         <i class="fa-solid fa-user-tie"></i>
+         <h3 class="service-card_title font-size-15 text-center">
+          إدارة المكاتب الاستشارية
+         </h3>
+        </div>
+       </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 col-xl-2">
+       <div class="service-card " style="    height: 83%;min-height: 134px;">
+        <div class="service-card_icon icon-custom text-center">
+         <i class="fa-light fa-washing-machine"></i>
+         <h3 class="service-card_title font-size-15 text-center">
+          مراكز تنظيف وكي الملابس (المغسلات)
+         </h3>
+        </div>
+       </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 col-xl-2">
+       <div class="service-card " style="    height: 83%;min-height: 134px;">
+        <div class="service-card_icon icon-custom text-center">
+         <i class="fa-regular fa-plane"></i>
+         <h3 class="service-card_title font-size-15 text-center">
+          انظمة ادارة وكالات السفر والسياحة
+         </h3>
+        </div>
+       </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 col-xl-2">
+       <div class="service-card " style="    height: 83%;min-height: 134px;">
+        <div class="service-card_icon icon-custom text-center">
+         <i class="fa-regular fa-rectangle-ad"></i>
+         <h3 class="service-card_title font-size-15 text-center">
+          الطباعة والدعاية والاعلان
+         </h3>
+        </div>
+       </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 col-xl-2">
+       <div class="service-card " style="    height: 83%;min-height: 134px;">
+        <div class="service-card_icon icon-custom text-center">
+         <i class="fa-solid fa-megaphone"></i>
+         <h3 class="service-card_title font-size-15 text-center">
+          شركات التسويق
+         </h3>
+        </div>
+       </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 col-xl-2">
+       <div class="service-card " style="    height: 83%;min-height: 134px;">
+        <div class="service-card_icon icon-custom text-center">
+         <i class="fa-solid fa-car-wrench"></i>
+         <h3 class="service-card_title font-size-15 text-center">
+          صيانة سيارات
+         </h3>
+        </div>
+       </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 col-xl-2">
+       <div class="service-card " style="    height: 83%;min-height: 134px;">
+        <div class="service-card_icon icon-custom text-center">
+         <i class="fa-regular fa-dumbbell"></i>
+         <h3 class="service-card_title font-size-15 text-center">
+          الجيم والنوادي الصحية
+         </h3>
+        </div>
+       </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 col-xl-2">
+       <div class="service-card " style="    height: 83%;min-height: 134px;">
+        <div class="service-card_icon icon-custom text-center">
+         <i class="fa-regular fa-screwdriver-wrench"></i>
+         <h3 class="service-card_title font-size-15 text-center">
+          مراكز الصيانة والدعم الفني
+         </h3>
+        </div>
+       </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 col-xl-2">
+       <div class="service-card " style="    height: 83%;min-height: 134px;">
+        <div class="service-card_icon icon-custom text-center">
+         <i class="fa-regular fa-school"></i>
+         <h3 class="service-card_title font-size-15 text-center">
+          المدارس والحضانات
+         </h3>
+        </div>
+       </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 col-xl-2">
+       <div class="service-card " style="    height: 83%;min-height: 134px;">
+        <div class="service-card_icon icon-custom text-center">
+         <i class="fa-regular fa-language"></i>
+         <h3 class="service-card_title font-size-15 text-center">
+          مراكز الترجمة
+         </h3>
+        </div>
+       </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 col-xl-2">
+       <div class="service-card " style="    height: 83%;min-height: 134px;">
+        <div class="service-card_icon icon-custom text-center">
+         <i class="fa-regular fa-graduation-cap"></i>
+         <h3 class="service-card_title font-size-15 text-center">
+          المراكز والمؤسسات التعليمية
+         </h3>
+        </div>
+       </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 col-xl-2">
+       <div class="service-card " style="    height: 83%;min-height: 134px;">
+        <div class="service-card_icon icon-custom text-center">
+         <i class="fa-regular fa-scale-balanced"></i>
+         <h3 class="service-card_title font-size-15 text-center">
+          مكاتب المحاماة والاستشارات القانونية
+         </h3>
+        </div>
+       </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 col-xl-2">
+       <div class="service-card " style="    height: 83%;min-height: 134px;">
+        <div class="service-card_icon icon-custom text-center">
+         <i class="fa-light fa-buildings"></i>
+         <h3 class="service-card_title font-size-15 text-center">
+          برنامج إدارة الشركات الانشاء والاستثمار العقاري
+         </h3>
+        </div>
+       </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 col-xl-2">
+       <div class="service-card " style="    height: 83%;min-height: 134px;">
+        <div class="service-card_icon icon-custom text-center">
+         <i class="fa-regular fa-truck-ramp-box"></i>
+         <h3 class="service-card_title font-size-15 text-center">
+          المؤسسات التجارية والتوريد
+         </h3>
+        </div>
+       </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 col-xl-2">
+       <div class="service-card " style="    height: 83%;min-height: 134px;">
+        <div class="service-card_icon icon-custom text-center">
+         <i class="fa-regular fa-books"></i>
+         <h3 class="service-card_title font-size-15 text-center">
+          إدارة المكتبات
+         </h3>
+        </div>
+       </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 col-xl-2">
+       <div class="service-card " style="    height: 83%;min-height: 134px;">
+        <div class="service-card_icon icon-custom text-center">
+         <i class="fa-regular fa-pills"></i>
+         <h3 class="service-card_title font-size-15 text-center">
+          شركات الأدوية
+         </h3>
+        </div>
+       </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 col-xl-2">
+       <div class="service-card " style=" height: 83%;min-height: 134px;">
+        <div class="service-card_icon icon-custom text-center">
+         <i class="fa-regular fa-warehouse-full"></i>
+         <h3 class="service-card_title font-size-15 text-center">
+          مخازن السيراميك
+         </h3>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+   <div class="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+    <div class="modal-dialog" role="document">
+     <div class="modal-content">
+      <div class="modal-header">
+       <div class="modal-title " id="exampleModalLabel">
+        <img src="{% static 'website/coretech/assets/img/logo.png' %}" style="width:95px">
+       </div>
+       <h5 class="mr-5">
+        طلب استشارة مجانية
+       </h5>
+       <button type="button"
+               class="btn-close"
+               data-bs-dismiss="modal"
+               aria-label="Close">
+       </button>
+      </div>
+      <div class="modal-body">
+       <form action="#" method="POST" class=" ">
+        <div class="row">
+         <div class="form-group col-md-6">
+          <input type="text"
+                 class="form-control"
+                 name="name"
+                 id="name"
+                 placeholder="الاسم">
+          <i class="fal fa-user"></i>
+         </div>
+         <div class="form-group  col-md-6">
+          <input type="email"
+                 class="form-control"
+                 name="email"
+                 id="email"
+                 placeholder="عنوان البريد الإلكتروني">
+          <i class="fal fa-envelope"></i>
+         </div>
+         <div class="form-group  col-md-6">
+          <input type="number"
+                 class="form-control"
+                 name="phone"
+                 id="phone"
+                 placeholder="رقم الهاتف">
+          <i class="fal fa-phone"></i>
+         </div>
+         <div class="form-group  col-md-6">
+          <input type="text"
+                 class="form-control"
+                 name="company"
+                 id="company"
+                 placeholder="اسم ال/ المؤسسة ">
+          <i class="fal fa-comment"></i>
+         </div>
+         <div class="form-group text-center col-12">
+          <textarea name="message"
+                    id="message"
+                    cols="30"
+                    rows="3"
+                    class="form-control"
+                    placeholder=" موضوع الاستشارة"></textarea>
+          <i class="fal fa-memo"></i>
+         </div>
+         <div class="form-btn  text-center col-12">
+          <button class="as-btn">
+           ارسل الطلب
+          </button>
+         </div>
+        </div>
+        <p class="form-messages mb-0 mt-3">
+        </p>
+       </form>
+      </div>
+     </div>
+    </div>
+   </div>
+   <section class="">
+    <div class="cta-wrap">
+     <div class="container">
+      <div class="row w-100 gx-0 align-items-center">
+       <div class="col-lg text-center text-lg-start">
+        <h5 class="mb-10 mt-n2 text-right">
+         احصل الان على تجربة مجانية لمدة 14 يوم
+        </h5>
+       </div>
+       <div class="col-lg-auto mt-35 mt-lg-0">
+        <div class="text-center">
+         <a href="#" class="as-btn style3" data-bs-toggle="modal" data-bs-target="#staticBackdrop"> تجربة النظام </a>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+   <!--==============================
+    Customer Area  
+    ==============================-->
+   <section class="space  bg-smoke" id="contacSec1">
+    <div class="container">
+     <div class="row justify-content-center">
+      <div class="col-xl-5 col-lg-7 col-md-9">
+       <div class="title-area text-center">
+        <h2 class="sec-title">
+         من عملائنا
+        </h2>
+       </div>
+      </div>
+     </div>
+     <div class="brand-box-wrap space-extra">
+      <div class="row as-carousel"
+           id="brandSlide"
+           data-slide-show="6"
+           data-lg-slide-show="5"
+           data-md-slide-show="4"
+           data-sm-slide-show="3"
+           data-xs-slide-show="3"
+           data-arrows="true">
+       <div class="col-auto">
+        <div class="text-center">
+         <img src="{% static 'website/coretech/assets/img/brand/brand_1_1.png' %}"
+              alt="Brand Logo">
+        </div>
+       </div>
+       <div class="col-auto">
+        <div class="text-center">
+         <img src="{% static 'website/coretech/assets/img/brand/brand_1_2.png' %}"
+              alt="Brand Logo">
+        </div>
+       </div>
+       <div class="col-auto">
+        <div class="text-center">
+         <img src="{% static 'website/coretech/assets/img/brand/brand_1_3.png' %}"
+              alt="Brand Logo">
+        </div>
+       </div>
+       <div class="col-auto">
+        <div class="text-center">
+         <img src="{% static 'website/coretech/assets/img/brand/brand_1_4.png' %}"
+              alt="Brand Logo">
+        </div>
+       </div>
+       <div class="col-auto">
+        <div class="text-center">
+         <img src="{% static 'website/coretech/assets/img/brand/brand_1_5.png' %}"
+              alt="Brand Logo">
+        </div>
+       </div>
+       <div class="col-auto">
+        <div class="text-center">
+         <img src="{% static 'website/coretech/assets/img/brand/brand_1_6.png' %}"
+              alt="Brand Logo">
+        </div>
+       </div>
+       <div class="col-auto">
+        <div class="text-center">
+         <img src="{% static 'website/coretech/assets/img/brand/brand_1_7.png' %}"
+              alt="Brand Logo">
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+   <!--==============================
+    Customer Area  
+    ==============================-->
+   <section class="space  bg-smoke" id="contacSec1">
+    <div class="container">
+     <div class="row justify-content-center">
+      <div class="col-xl-5 col-lg-7 col-md-9">
+       <div class="title-area text-center">
+        <h2 class="sec-title">
+         من وكلائنا
+        </h2>
+       </div>
+      </div>
+     </div>
+     <div class="brand-box-wrap space-extra">
+      <div class="row as-carousel"
+           id="brandSlide"
+           data-slide-show="6"
+           data-lg-slide-show="5"
+           data-md-slide-show="4"
+           data-sm-slide-show="3"
+           data-xs-slide-show="3"
+           data-arrows="true">
+       <div class="col-auto">
+        <div class="text-center">
+         <img src="{% static 'website/coretech/assets/img/brand/brand_1_1.png' %}"
+              alt="Brand Logo">
+        </div>
+       </div>
+       <div class="col-auto">
+        <div class="text-center">
+         <img src="{% static 'website/coretech/assets/img/brand/brand_1_2.png' %}"
+              alt="Brand Logo">
+        </div>
+       </div>
+       <div class="col-auto">
+        <div class="text-center">
+         <img src="{% static 'website/coretech/assets/img/brand/brand_1_3.png' %}"
+              alt="Brand Logo">
+        </div>
+       </div>
+       <div class="col-auto">
+        <div class="text-center">
+         <img src="{% static 'website/coretech/assets/img/brand/brand_1_4.png' %}"
+              alt="Brand Logo">
+        </div>
+       </div>
+       <div class="col-auto">
+        <div class="text-center">
+         <img src="{% static 'website/coretech/assets/img/brand/brand_1_5.png' %}"
+              alt="Brand Logo">
+        </div>
+       </div>
+       <div class="col-auto">
+        <div class="text-center">
+         <img src="{% static 'website/coretech/assets/img/brand/brand_1_6.png' %}"
+              alt="Brand Logo">
+        </div>
+       </div>
+       <div class="col-auto">
+        <div class="text-center">
+         <img src="{% static 'website/coretech/assets/img/brand/brand_1_7.png' %}"
+              alt="Brand Logo">
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+  {% endblock content %}

@@ -1,0 +1,137 @@
+{% extends 'website/coretech/_base.html' %}
+{% block title %}           
+ 
+               اطلب الخدمة المطلوبة وسيتم التواصل معك
+         
+                 {% endblock title %}
+{% load static %}
+{% block content %}
+<div class="breadcumb-wrapper background-about" style="background: linear-gradient(to top, #3c3369ba, #4c4779cc), url({% static 'website/coretech/assets/img/breadcum/istockphoto-1221653457-170667a.jpg' %}) no-repeat;">
+    <div class="container">
+        <div class="breadcumb-content">
+            <h1 class="breadcumb-title"> 
+                
+ 
+                اطلب الخدمة المطلوبة وسيتم التواصل معك
+                    
+            </h1>
+            <ul class="breadcumb-menu">
+                <li><a href="{% url 'website:website_index' %}">الصفحة الرئيسية</a></li>
+                <li> 
+ 
+               اطلب الخدمة المطلوبة وسيتم التواصل معك
+            
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<section class="mt-5 mb-5">
+    <div class="container">
+        <div class="col-md-12">
+
+        </div>
+       <div class="card form-design">
+        <h4 class="text-center" >        
+ 
+            اطلب الخدمة المطلوبة وسيتم التواصل معك
+                  </h4>
+        <div class="card-body"> 
+            
+            {% comment %} django form {% endcomment %}
+            {% comment %} <form method="post">{% csrf_token %}
+                {{ form.as_div }}
+                <input type="submit" value="Send message">
+            </form> {% endcomment %}
+            
+
+            <form  method="POST" class=" ">
+        
+                {% csrf_token %}
+                
+                {% if form.errors or form.non_field_errors%}
+                         
+                <div class="alert alert-danger">
+                    {{ form.non_field_errors }}
+                    {{ form.errors }}
+                </div>
+                {% endif %}
+               
+
+                 
+                <div class="row">
+                    <div class="form-group col-md-6">
+                        <input type="text" value="{{form.name.value|default_if_none:""}}" class="form-control" {% if form.name.field.required%} required {%endif%} name="{{form.name.name}}" id="{{form.name.id_for_label }}" placeholder="{{form.name.field.label}}:{{ form.name.help_text|default_if_none:""|safe }}">
+                        <i class="fal fa-user"></i>
+                        {{ form.name.errors }}
+
+                    </div>
+                    <div class="form-group  col-md-6">
+                        <input type="email" value="{{form.email.value|default_if_none:""}}" {% if form.email.field.required%} required {%endif%} class="form-control" name="{{form.email.name}}" id="{{form.email.id_for_label }}" placeholder="{{form.email.field.label}}:{{ form.email.help_text|default_if_none:""|safe }}">
+                        <i class="fal fa-envelope"></i>
+                        {{ form.email.errors }}
+
+                    </div>
+                    <div class="form-group  col-md-6">
+                        {% comment %} لو كتبنا اسم الحقل فقط {% endcomment %}
+                        {% comment %} {{form.phone.label_tag}} {% endcomment %}
+                        {% comment %} في خصائص نوصل لها مباشرة باسم الحقل  مثلا الname {% endcomment %}
+                        {% comment %} وخصائص نوصلها باسم الحقل وبعدها كلمة field {% endcomment %}
+                        {% comment %} {{form.phone.field.required}} {% endcomment %}
+                        
+                        <input type="number"  value="{{form.phone.value|default_if_none:""}}" {% if form.phone.field.required%} required {%endif%} class="form-control" id="{{form.phone.id_for_label}}" name="{{form.phone.name}}" placeholder="{{form.phone.field.label}}">
+                        <i class="fal fa-phone"></i>
+                        {{ form.phone.errors }}
+
+                    </div>
+                    <div class="form-group  col-md-6">
+                        <input type="text"value="{{form.company.value|default_if_none:""}}"  class="form-control"   {% if form.company.field.required%} required {%endif%} name="{{form.company.name}}" id="{{form.company.id_for_label}}" placeholder="{{form.company.field.label}}">
+                        <i class="fal fa-comment"></i>
+                        {{ form.company.errors }}
+
+                    </div>
+                   
+                    <div class="form-group col-12">
+                       
+                        اختر الخدمة المطلوبة
+
+                        <div class="row" id="{{form.services.field.id_for_label}}"> 
+                            {% comment %} {% for option in form.services %}
+                            <label for="{{ option.id_for_label }}">
+                                {{ option.choice_label }}
+                                <span class="radio">{{ option.tag }}</span>
+                            </label>
+                            {% endfor %}  {% endcomment %}
+                            {% for key, choice in form.services.field.widget.choices %}
+                            
+                            <div class="col-md-6 custom-checkbox">
+                                <div class="form-check mt-3">
+                                    <input class="form-check-input"   name="{{form.services.name}}" type="checkbox"  value="{{key}}" 
+                                    id="id_{{form.services.name}}_{{ forloop.counter0 }}">
+                                    <label class="form-check-label" for="id_{{form.services.name}}_{{ forloop.counter0 }}">
+                                        {{ choice }}
+                                    </label>
+                                  
+                                    {{ form.services.errors }}
+
+                                </div>
+                            </div>
+                            {% endfor %}
+
+                        </div>
+              
+                    </div>
+                    <div class="form-btn col-12">
+                        <button name="send" class="as-btn">ارسل الخدمة </button>
+                    </div>
+                </div>
+                <p class="form-messages mb-0 mt-3"></p>
+            </form>
+
+        </div>
+       </div>
+    </div>
+</section>
+
+    {% endblock content %}
+    
